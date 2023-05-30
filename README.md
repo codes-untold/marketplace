@@ -1,16 +1,11 @@
-# moniepoint
+### Market Place APP
+## Clone of Marketplace Mobile App Concept by Tokosmile(https://dribbble.com/shots/20449197-Marketplace-Mobile-App-Concept-Tokosmile)
 
-A new Flutter project.
+### Description
 
-## Getting Started
+Welcome aboard fellow developer. This Project is a clone of a mobile app marketplace design concept on Dribbble by Tokosmile. It contains animations,beautiful scroll effects and a great user experience
 
-This project is a starting point for a Flutter application.
+## Images
 
-A few resources to get you started if this is your first Flutter project:
+<img alt="Connection Screen" src="https://firebasestorage.googleapis.com/v0/b/linkup-d48a3.appspot.com/o/Untitled%20design.png?alt=media&token=adc30ef9-faac-4d4f-b8dd-8ff5e794eb56" width="500"/>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
