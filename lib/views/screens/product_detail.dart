@@ -232,8 +232,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                       labelColor: const Color(0XFF4DAA96),
                       unselectedLabelColor: Colors.grey,
                       indicatorColor: const Color(0XFF4DAA96),
-                      // padding: EdgeInsets.zero,
-                      // labelPadding: EdgeInsets.zero,
                       labelStyle: AppStyles.boldText
                           .copyWith(color: const Color(0XFF4DAA96)),
                       controller: _tabController,
@@ -250,46 +248,76 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                     ),
                   ),
                 ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 20,
+                SliverToBoxAdapter(
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: const SizedBox(
+                      height: 20,
+                    ),
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      customRow('Brand:', 'CHArmkpR'),
-                      customRow('Color:', 'Aprikot'),
-                    ],
-                  ),
-                ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 10,
-                  ),
-                ),
-                SliverToBoxAdapter(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      customRow('Category:', 'Casual Shirt'),
-                      customRow('Material:', 'Polyester'),
-                    ],
-                  ),
-                ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 10,
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customRow('Brand:', 'CHArmkpR'),
+                        customRow('Color:', 'Aprikot'),
+                      ],
+                    ),
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      customRow('Condition:', 'New'),
-                      customRow('Heavy:', '200g'),
-                    ],
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: const SizedBox(
+                      height: 10,
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customRow('Category:', 'Casual Shirt'),
+                        customRow('Material:', 'Polyester'),
+                      ],
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: const SizedBox(
+                      height: 10,
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Spring.slide(
+                    animDuration: const Duration(milliseconds: 500),
+                    slideType: SlideType.slide_in_bottom,
+                    delay: const Duration(milliseconds: 500),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customRow('Condition:', 'New'),
+                        customRow('Heavy:', '200g'),
+                      ],
+                    ),
                   ),
                 ),
                 const SliverToBoxAdapter(
@@ -504,52 +532,57 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                       const SizedBox(
                         width: 20,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Thrifting_Store',
-                              style: AppStyles.extraBoldText
-                                  .copyWith(fontSize: 12, color: Colors.black),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Active 5 min ago | 96.7% Positive Feedback',
-                              style: AppStyles.mediumText
-                                  .copyWith(fontSize: 12, color: Colors.grey),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15, vertical: 4),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(4),
-                                  border: Border.all(
-                                      color: const Color(0XFF4DAA96))),
-                              child: Row(children: [
-                                const Icon(
-                                  Icons.house,
-                                  size: 15,
-                                  color: Color(0XFF4DAA96),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  'Visit Store',
-                                  style: AppStyles.semiBoldText.copyWith(
-                                      color: Color(0XFF4DAA96), fontSize: 12),
-                                )
-                              ]),
-                            )
-                          ],
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Thrifting_Store',
+                                style: AppStyles.extraBoldText.copyWith(
+                                    fontSize: 12, color: Colors.black),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Active 5 min ago | 96.7% Positive Feedback',
+                                style: AppStyles.mediumText
+                                    .copyWith(fontSize: 12, color: Colors.grey),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15, vertical: 4),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(4),
+                                    border: Border.all(
+                                        color: const Color(0XFF4DAA96))),
+                                child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(
+                                        Icons.house,
+                                        size: 15,
+                                        color: Color(0XFF4DAA96),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        'Visit Store',
+                                        style: AppStyles.semiBoldText.copyWith(
+                                            color: Color(0XFF4DAA96),
+                                            fontSize: 12),
+                                      )
+                                    ]),
+                              )
+                            ],
+                          ),
                         ),
                       )
                     ],
@@ -627,6 +660,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                             ],
                           ),
                         ),
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Expanded(
                             flex: 7,
                             child: Column(
@@ -649,10 +685,20 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Text(
-                    'Recommendation',
-                    style: AppStyles.extraBoldText
-                        .copyWith(color: const Color(0XFF2B2D40), fontSize: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Recommendation',
+                        style: AppStyles.extraBoldText.copyWith(
+                            color: const Color(0XFF2B2D40), fontSize: 15),
+                      ),
+                      Text(
+                        'See More',
+                        style: AppStyles.boldText.copyWith(
+                            color: const Color(0XFF4DAA96), fontSize: 12),
+                      ),
+                    ],
                   ),
                 ),
                 const SliverToBoxAdapter(
@@ -666,9 +712,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen>
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 10.0,
+                      mainAxisSpacing: 20.0,
                       crossAxisSpacing: 10.0,
-                      childAspectRatio: 0.7,
+                      childAspectRatio: 0.6,
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {

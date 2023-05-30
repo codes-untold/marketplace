@@ -61,8 +61,7 @@ class ProductCard extends StatelessWidget {
                       Text(
                         productData.shortDescription,
                         style: AppStyles.extraBoldText.copyWith(
-                          color: Colors.black.withOpacity(0.8),
-                        ),
+                            color: Colors.black.withOpacity(0.8), fontSize: 13),
                       )
                     ],
                   ),
@@ -80,7 +79,7 @@ class ProductCard extends StatelessWidget {
                             width: 5,
                           ),
                           Text(
-                            '4.9 | 234',
+                            '4.9',
                             style: AppStyles.boldText.copyWith(
                                 color: Colors.black.withOpacity(0.3),
                                 fontSize: 12),

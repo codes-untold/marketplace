@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:moniepoint/utils/styles.dart';
 
 class BannerCarousel extends StatefulWidget {
-  BannerCarousel({super.key});
-
+  BannerCarousel(this.pageIndex, {super.key});
+  Function(int) pageIndex;
   @override
   State<BannerCarousel> createState() => _BannerCarouselState();
 }
@@ -23,6 +23,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
     return CarouselSlider(
         options: CarouselOptions(
           onPageChanged: (index, reason) {
+            widget.pageIndex(index);
             setState(() {
               selectedIndex = index;
             });

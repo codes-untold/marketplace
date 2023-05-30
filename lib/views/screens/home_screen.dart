@@ -5,8 +5,15 @@ import 'package:moniepoint/utils/styles.dart';
 import 'package:moniepoint/views/widgets/banner.dart';
 import 'package:moniepoint/views/widgets/product_card.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  Color appBarColor = const Color(0XFFE8EBEA);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         slivers: [
           SliverAppBar(
               toolbarHeight: 80,
-              backgroundColor: Colors.white,
+              backgroundColor: appBarColor,
               expandedHeight: screenSize.height * 0.45,
               elevation: 0,
               pinned: true,
@@ -63,7 +70,20 @@ class HomeScreen extends StatelessWidget {
               ),
               flexibleSpace: FlexibleSpaceBar(
                   background: SizedBox(
-                      width: double.infinity, child: BannerCarousel()))),
+                      width: double.infinity,
+                      child: BannerCarousel((index) {
+                        print(index);
+                        if (index == 0) {
+                          setState(() {
+                            appBarColor = const Color(0XFFE8EBEA);
+                          });
+                        }
+                        if (index == 1) {
+                          setState(() {
+                            appBarColor = const Color(0XFFE8E0E1);
+                          });
+                        }
+                      })))),
           const SliverToBoxAdapter(
             child: SizedBox(height: 20),
           ),
@@ -154,9 +174,9 @@ class HomeScreen extends StatelessWidget {
             sliver: SliverGrid(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisSpacing: 10.0,
+                mainAxisSpacing: 20.0,
                 crossAxisSpacing: 10.0,
-                childAspectRatio: 0.7,
+                childAspectRatio: 0.6,
               ),
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {

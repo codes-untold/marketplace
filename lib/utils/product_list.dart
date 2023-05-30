@@ -12,8 +12,7 @@ List<ProductModel> productList = [
       isFavourite: false,
       price: "12.00",
       productName: "Shirt",
-      shortDescription:
-          "3 in what org bunny suit for men avaialble in blue and grey"),
+      shortDescription: "3 in what org bunny suit for men avaialble in blue"),
   ProductModel(
       imgPath: "assets/images/banner_img1.png",
       isFavourite: false,
@@ -31,8 +30,7 @@ List<ProductModel> productList = [
       isFavourite: false,
       price: "12.00",
       productName: "Shirt",
-      shortDescription:
-          "3 in what org bunny suit for men avaialble in blue and grey"),
+      shortDescription: "3 in what org bunny suit for men avaialble in blue"),
   ProductModel(
       imgPath: "assets/images/banner_img1.png",
       isFavourite: false,
@@ -50,8 +48,7 @@ List<ProductModel> productList = [
       isFavourite: false,
       price: "12.00",
       productName: "Shirt",
-      shortDescription:
-          "3 in what org bunny suit for men avaialble in blue and grey"),
+      shortDescription: "3 in what org bunny suit for men avaialble in blue"),
   ProductModel(
       imgPath: "assets/images/banner_img1.png",
       isFavourite: false,
@@ -69,8 +66,7 @@ List<ProductModel> productList = [
       isFavourite: false,
       price: "12.00",
       productName: "Shirt",
-      shortDescription:
-          "3 in what org bunny suit for men avaialble in blue and grey"),
+      shortDescription: "3 in what org bunny suit for men avaialble in blue"),
   ProductModel(
       imgPath: "assets/images/banner_img1.png",
       isFavourite: false,
@@ -88,8 +84,7 @@ List<ProductModel> productList = [
       isFavourite: false,
       price: "12.00",
       productName: "Shirt",
-      shortDescription:
-          "3 in what org bunny suit for men avaialble in blue and grey"),
+      shortDescription: "3 in what org bunny suit for men avaialble in blue"),
   ProductModel(
       imgPath: "assets/images/banner_img1.png",
       isFavourite: false,
